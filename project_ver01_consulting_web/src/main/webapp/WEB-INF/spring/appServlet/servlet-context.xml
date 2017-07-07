@@ -22,6 +22,7 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.project.main" />
+	<context:component-scan base-package="com.project.REST.controller" />
 	
 	
 	
