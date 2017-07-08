@@ -11,6 +11,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.project.REST.consulting.DAO.ConsultingInterface;
 import com.project.REST.consulting.DAO.ConsultingRepository;
+import com.project.REST.consulting.Service.ConsultingService;
+import com.project.REST.consulting.Service.CosultingServiceInterface;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/spring/**/*.xml"})
@@ -22,10 +24,16 @@ public class TEST_JDBC {
 	@Inject
 	private ConsultingInterface con;
 	
-	@Test
-	public void test()throws Exception{
-		
-		con.testDBCP();
-		System.out.println("오잉~!");
+	@Inject
+	private CosultingServiceInterface con1;
+//	@Test
+//	public void test()throws Exception{
+//		con.testDBCP();
+//		System.out.println("오잉~!");
+//	}
+	@Test 
+	public void test1()throws Exception{
+		con1.testInsert();
+		System.out.println("ok~");
 	}
 }
