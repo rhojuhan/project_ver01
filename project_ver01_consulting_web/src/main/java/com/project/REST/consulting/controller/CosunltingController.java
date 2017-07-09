@@ -20,13 +20,16 @@ public class CosunltingController {
 	@Inject
 	private CosultingServiceInterface serviceOBJ;
 	
-	@RequestMapping(value="/se",method=RequestMethod.POST)
-	public String testRest(@RequestParam("id") String id , @RequestParam("pw") String pw)throws Exception{
+	@RequestMapping(value="/te",method = RequestMethod.POST)
+	public String test(@RequestParam("id") String id , @RequestParam("pw") String pw)throws Exception{
 		System.out.println(id + ":" + pw);
 		return "success";
 	}
-	@RequestMapping(value="/te",method = RequestMethod.GET)
-	public void test()throws Exception{
-		System.out.println("hello");
+	
+	@RequestMapping(value="/se",method=RequestMethod.GET)
+	public String testRest(@RequestParam("te1") String te1 , @RequestParam("te2") String te2)throws Exception{
+		System.out.println(te1 + ":" + te2);
+		return "success";
 	}
+	
 }
