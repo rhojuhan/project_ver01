@@ -31,9 +31,15 @@ public class TEST_JDBC {
 //		con.testDBCP();
 //		System.out.println("오잉~!");
 //	}
-	@Test 
-	public void test1()throws Exception{
-		con1.testInsert();
-		System.out.println("ok~");
+//	@Test 
+//	public void test1()throws Exception{
+//		con1.testInsert();
+//		System.out.println("ok~");
+//	}
+	@Test
+	public void test2()throws Exception{
+		System.out.println(con.getPlanList(2004));
+		System.out.println(con.getExtraList(2004));
+		System.out.println(con.getHomeProductList(2004));
 	}
 }
