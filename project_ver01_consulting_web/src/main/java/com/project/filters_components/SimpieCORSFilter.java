@@ -1,4 +1,4 @@
-package com.project.filters;
+package com.project.filters_components;
 
 import java.io.IOException;
 
