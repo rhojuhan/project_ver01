@@ -62,8 +62,9 @@
 	
 	<filter>
 		<filter-name>cors</filter-name>
-		<filter-class>com.project.main.SimpieCORSFilter</filter-class>
+		<filter-class>com.project.filters.SimpieCORSFilter</filter-class>
 	</filter>
+	
 	<filter-mapping>
 		<filter-name>cors</filter-name>
 		<url-pattern>/*</url-pattern>

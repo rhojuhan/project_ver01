@@ -41,5 +41,6 @@ public class TEST_JDBC {
 		System.out.println(con.getPlanList(2004));
 		System.out.println(con.getExtraList(2004));
 		System.out.println(con.getHomeProductList(2004));
+		System.out.println(con1.getPlanInfor(2004));
 	}
 }
