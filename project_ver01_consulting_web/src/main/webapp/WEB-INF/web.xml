@@ -62,7 +62,7 @@
 	
 	<filter>
 		<filter-name>cors</filter-name>
-		<filter-class>com.project.filters_components.SimpieCORSFilter</filter-class>
+		<filter-class>com.project.filters_components.SimpieCorsFilter</filter-class>
 	</filter>
 	
 	<filter-mapping>

@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SimpieCORSFilter implements Filter{
-
+public class SimpieCorsFilter implements Filter{
 	
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
@@ -28,12 +27,11 @@ public class SimpieCORSFilter implements Filter{
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		
 		chain.doFilter(req, res);
-		
 	}
-
+	
 	@Override
 	public void destroy() {/* TODO Auto-generated method stub*/}
 	@Override
-	public void init(FilterConfig arg0) throws ServletException {		/* TODO Auto-generated method stub*/}
+	public void init(FilterConfig arg0) throws ServletException {/* TODO Auto-generated method stub*/}
 
 }
