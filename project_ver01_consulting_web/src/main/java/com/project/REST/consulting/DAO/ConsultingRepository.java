@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.project.REST.consulting.DTO.MakerProductDTO;
 import com.project.REST.consulting.DTO.Tel_Extra_DTO;
 import com.project.REST.consulting.DTO.Tel_H_Product_DTO;
 import com.project.REST.consulting.DTO.Tel_Plan_DTO;
@@ -33,8 +34,13 @@ public class ConsultingRepository implements ConsultingInterface{
 	}
 
 	@Override
-	public List<Tel_Plan_DTO> getDefaultList(int defaultPlanCode) throws Exception {
-		return sessionBean.selectList("getDefaultList", defaultPlanCode);
+	public List<Tel_Plan_DTO> getDefaultPlanList(Tel_Plan_DTO tel_Plan_DTO) throws Exception {
+		return sessionBean.selectList("getDefaultList", tel_Plan_DTO);
+	}
+
+	@Override
+	public List<MakerProductDTO> getDefaultProductList(MakerProductDTO makerDTO) throws Exception {
+		return sessionBean.selectList("getProductList", makerDTO);
 	}
 	
 }

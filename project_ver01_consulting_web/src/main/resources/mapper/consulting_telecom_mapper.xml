@@ -7,7 +7,7 @@
 		 <![CDATA[
 		 	SELECT tel_tbl.tel_name,plan_tbl.tel_code,plan_code,plan_name,plan_price,plan_infor1,plan_infor2,plan_infor3,plan_sale,plan_modify
 		 	FROM tel_tbl, PLAN_TBL 
-		 	WHERE tel_tbl.TEL_CODE=2004 AND plan_tbl.PLAN_CODE=#{defaultPlanCode}  
+		 	WHERE tel_tbl.TEL_CODE=#{tel_code} AND plan_tbl.PLAN_CODE=#{plan_code}  
 		 ]]>
 	</select>
 	<select id="getPlanList" resultType="Tel_Plan_DTO">

@@ -26,14 +26,18 @@ public class CosunltingController {
 	public ResponseEntity<List<Tel_Plan_DTO>> defaultFirstPage()throws Exception{
 		
 		int defaultTelCode = 2004;
-		int defaultPlanCode = 11;
-		int defaultMakerCode = 11;
-		int defaultProductCode = 11;
+		int defaultPlanCode = 3012;
+		int defaultMakerCode = 7001;
+		int defaultProductCode = 7031;
+		
+		Tel_Plan_DTO plan_DTO=new Tel_Plan_DTO();
+		plan_DTO.setTel_code(defaultTelCode);
+		plan_DTO.setPlan_code(defaultPlanCode);
 		
 		ResponseEntity<List<Tel_Plan_DTO>> getEntityList = null;
 		
 		try {
-			getEntityList=new ResponseEntity<>(serviceBean.getPlanInfor(123), HttpStatus.OK);
+			getEntityList=new ResponseEntity<>(serviceBean.getDefaultPlanList(plan_DTO), HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
 			getEntityList=new ResponseEntity<>(HttpStatus.BAD_REQUEST);

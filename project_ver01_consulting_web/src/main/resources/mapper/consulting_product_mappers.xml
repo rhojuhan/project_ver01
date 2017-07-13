@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.REST.consulting.DAO">
+	<select id="getProductList" resultType="MakerProductDTO">
+		<![CDATA[
+		SELECT makerCode,productCode,productName,productPrice,producrINfor_os,producrINfor_cpu,producrINfor_camera,producrINfor_memory,producrINfor_ratings,producrINfor_ratings_infor
+		FROM maker_product_tbl
+		WHERE makerCode=#{makerCode} AND productCode=#{productCode}
+		]]>
+	</select>
+</mapper>

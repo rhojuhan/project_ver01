@@ -1,7 +1,6 @@
 package com.project.main;
 
 import javax.inject.Inject;
-import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
@@ -10,8 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.project.REST.consulting.DAO.ConsultingInterface;
-import com.project.REST.consulting.DAO.ConsultingRepository;
-import com.project.REST.consulting.Service.ConsultingService;
+import com.project.REST.consulting.DTO.MakerProductDTO;
 import com.project.REST.consulting.Service.CosultingServiceInterface;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -25,7 +23,8 @@ public class TEST_JDBC {
 	private ConsultingInterface con;
 	
 	@Inject
-	private CosultingServiceInterface con1;
+	private CosultingServiceInterface service;
+	
 //	@Test
 //	public void test()throws Exception{
 //		con.testDBCP();
@@ -43,8 +42,19 @@ public class TEST_JDBC {
 //		System.out.println(con.getHomeProductList(2004));
 //		System.out.println(con1.getPlanInfor(2004));
 //	}
-	@Test 
-	public void test3()throws Exception{
-		System.out.println(con.getDefaultList(3012));
+//	@Test 
+//	public void test3()throws Exception{
+//		System.out.println(con.getDefaultList(3012));
+//	}
+	@Test
+	public void getTestDefaultData()throws Exception{
+		
+		MakerProductDTO makerDTO =new MakerProductDTO();
+	
+			makerDTO.setMakerCode(7001);
+			makerDTO.setProductCode(7031);
+		
+		System.out.println(service.getDefaultMakerList(makerDTO));
+		
 	}
 }
