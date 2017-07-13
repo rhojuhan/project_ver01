@@ -16,11 +16,6 @@ public class ConsultingService implements CosultingServiceInterface{
 	private ConsultingInterface con;
 	
 	@Override
-	public void testInsert() throws Exception {
-		con.testDBCP();
-	}
-
-	@Override
 	public List<Tel_Plan_DTO> getPlanInfor(int telCode) throws Exception {
 		// TODO Auto-generated method stub
 		return con.getPlanList(telCode);

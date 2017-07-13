@@ -36,11 +36,15 @@ public class TEST_JDBC {
 //		con1.testInsert();
 //		System.out.println("ok~");
 //	}
-	@Test
-	public void test2()throws Exception{
-		System.out.println(con.getPlanList(2004));
-		System.out.println(con.getExtraList(2004));
-		System.out.println(con.getHomeProductList(2004));
-		System.out.println(con1.getPlanInfor(2004));
+//	@Test
+//	public void test2()throws Exception{
+//		System.out.println(con.getPlanList(2004));
+//		System.out.println(con.getExtraList(2004));
+//		System.out.println(con.getHomeProductList(2004));
+//		System.out.println(con1.getPlanInfor(2004));
+//	}
+	@Test 
+	public void test3()throws Exception{
+		System.out.println(con.getDefaultList(3012));
 	}
 }

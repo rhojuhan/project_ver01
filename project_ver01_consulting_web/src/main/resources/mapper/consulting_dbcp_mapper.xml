@@ -3,26 +3,33 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.REST.DAO">
+	<select id="getDefaultList" resultType="Tel_Plan_DTO">
+		 <![CDATA[
+		 	SELECT tel_tbl.tel_name,plan_tbl.tel_code,plan_code,plan_name,plan_price,plan_infor1,plan_infor2,plan_infor3,plan_sale,plan_modify
+		 	FROM tel_tbl, PLAN_TBL 
+		 	WHERE tel_tbl.TEL_CODE=2004 AND plan_tbl.PLAN_CODE=#{defaultPlanCode}  
+		 ]]>
+	</select>
 	<select id="getPlanList" resultType="Tel_Plan_DTO">
-	 <![CDATA[
-		SELECT tel_code,plan_code,plan_name,plan_price,plan_infor1,plan_infor2,plan_infor3,plan_sale,plan_modify 
-		FROM PLAN_TBL 
-		WHERE TEL_CODE=#{telCode}
-	 ]]>
+	 	<![CDATA[
+			SELECT tel_code,plan_code,plan_name,plan_price,plan_infor1,plan_infor2,plan_infor3,plan_sale,plan_modify 
+			FROM PLAN_TBL 
+			WHERE TEL_CODE=#{telCode}
+	 	]]>
 	</select>
 	<select id="getExtraList" resultType="Tel_Extra_DTO">
-	 <![CDATA[
-	 	SELECT tel_code,extra_code,extra_name,extra_price,extra_infor1,extra_infro2,extra_infor3,extra_modify
-	 	FROM EXTRA_TBL
-	 	WHERE TEL_CODE=#{telCode} 
-	 ]]>
+	 	<![CDATA[
+	 		SELECT tel_code,extra_code,extra_name,extra_price,extra_infor1,extra_infro2,extra_infor3,extra_modify
+	 		FROM EXTRA_TBL
+	 		WHERE TEL_CODE=#{telCode} 
+	 	]]>
 	</select>
 	<select id="getHomeProductList" resultType="Tel_H_Product_DTO">
-	 <![CDATA[
-		SELECT tel_code,h_pro_code,h_pro_name,h_pro_price,h_pro_info1,h_pro_infor2,h_pro_infor3,h_pro_modify
-		FROM HOME_PRODUCT_TBL
-		WHERE TEL_CODE=#{telCode}
-	 ]]>
+	 	<![CDATA[
+			SELECT tel_code,h_pro_code,h_pro_name,h_pro_price,h_pro_info1,h_pro_infor2,h_pro_infor3,h_pro_modify
+			FROM HOME_PRODUCT_TBL
+			WHERE TEL_CODE=#{telCode}
+		]]>
 	</select>
 </mapper>
 

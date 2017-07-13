@@ -1,6 +1,7 @@
 package com.project.REST.consulting.DTO;
 
 public class Tel_Plan_DTO {
+	private String tel_name;
 	private int tel_code;
 	private int plan_code;
 	private String plan_name;
@@ -11,6 +12,12 @@ public class Tel_Plan_DTO {
 	private int plan_sale;
 	private String plan_modify;
 	
+	public String getTel_name() {
+		return tel_name;
+	}
+	public void setTel_name(String tel_name) {
+		this.tel_name = tel_name;
+	}
 	public int getTel_code() {
 		return tel_code;
 	}
@@ -67,8 +74,9 @@ public class Tel_Plan_DTO {
 	}
 	@Override
 	public String toString() {
-		return "Tel_Plan_DTO [tel_code=" + tel_code + ", plan_code=" + plan_code + ", plan_name=" + plan_name
-				+ ", plan_price=" + plan_price + ", plan_infor1=" + plan_infor1 + ", plan_infor2=" + plan_infor2
-				+ ", plan_infor3=" + plan_infor3 + ", plan_sale=" + plan_sale + ", plan_modify=" + plan_modify + "]";
+		return "Tel_Plan_DTO [tel_name=" + tel_name + ", tel_code=" + tel_code + ", plan_code=" + plan_code
+				+ ", plan_name=" + plan_name + ", plan_price=" + plan_price + ", plan_infor1=" + plan_infor1
+				+ ", plan_infor2=" + plan_infor2 + ", plan_infor3=" + plan_infor3 + ", plan_sale=" + plan_sale
+				+ ", plan_modify=" + plan_modify + "]";
 	}
 }

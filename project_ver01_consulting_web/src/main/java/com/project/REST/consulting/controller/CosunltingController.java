@@ -15,21 +15,25 @@ import com.project.REST.consulting.DTO.Tel_Plan_DTO;
 import com.project.REST.consulting.Service.CosultingServiceInterface;
 
 @RestController
-@RequestMapping("/re")
+@RequestMapping("/items")
 public class CosunltingController {
 	
 	@Inject
 	private CosultingServiceInterface serviceBean;
 //	/{planCode}/{makerCode}/{productCode} ,@PathVariable("planCode") int planCode
 	
-	@RequestMapping(value="/se/{telCode}",method=RequestMethod.GET)
-	public ResponseEntity<List<Tel_Plan_DTO>> defaultFirstPage(@PathVariable("telCode") int telCode)throws Exception{
+	@RequestMapping(value="/default",method=RequestMethod.GET)
+	public ResponseEntity<List<Tel_Plan_DTO>> defaultFirstPage()throws Exception{
+		
+		int defaultTelCode = 2004;
+		int defaultPlanCode = 11;
+		int defaultMakerCode = 11;
+		int defaultProductCode = 11;
 		
 		ResponseEntity<List<Tel_Plan_DTO>> getEntityList = null;
-		System.out.println(telCode);
 		
 		try {
-			getEntityList=new ResponseEntity<>(serviceBean.getPlanInfor(telCode),HttpStatus.OK);
+			getEntityList=new ResponseEntity<>(serviceBean.getPlanInfor(123), HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
 			getEntityList=new ResponseEntity<>(HttpStatus.BAD_REQUEST);
