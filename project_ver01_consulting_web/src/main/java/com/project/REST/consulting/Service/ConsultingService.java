@@ -11,7 +11,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 
 import com.project.REST.consulting.DAO.ConsultingInterface;
 import com.project.REST.consulting.DTO.DefaultDataDTO;
-import com.project.REST.consulting.DTO.Tel_Plan_DTO;
+import com.project.REST.consulting.DTO.DefaultPrameterDTO;
 
 @Service
 public class ConsultingService implements CosultingServiceInterface{
@@ -28,18 +28,9 @@ public class ConsultingService implements CosultingServiceInterface{
 	}
 
 	@Override
-	public List<Tel_Plan_DTO> getPlanInfor(int telCode) throws Exception {
+	public List<DefaultDataDTO> getDefaultAllList(DefaultPrameterDTO defaultPrameterDTO) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		return serviceBean.getDefaultAllList(defaultPrameterDTO);
 	}
-
-	@Override
-	public List<DefaultDataDTO> getDefaultAllList(DefaultDataDTO defaultDataDTO) throws Exception {
-		// TODO Auto-generated method stub
-		
-		return serviceBean.getDefaultAllList(defaultDataDTO);
-	}
-
-	
 
 }

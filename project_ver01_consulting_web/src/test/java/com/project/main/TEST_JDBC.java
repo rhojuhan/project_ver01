@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.project.REST.consulting.DAO.ConsultingInterface;
 import com.project.REST.consulting.DTO.DefaultDataDTO;
+import com.project.REST.consulting.DTO.DefaultPrameterDTO;
 import com.project.REST.consulting.DTO.MakerProductDTO;
 import com.project.REST.consulting.Service.CosultingServiceInterface;
 
@@ -49,7 +50,7 @@ public class TEST_JDBC {
 //	}
 	@Test
 	public void getTestDefaultData()throws Exception{
-		DefaultDataDTO defaultDataDTO =new DefaultDataDTO();
+		DefaultPrameterDTO defaultDataDTO =new DefaultPrameterDTO();
 		defaultDataDTO.setTel_code(2004);
 		defaultDataDTO.setPlan_code(3012);
 		defaultDataDTO.setMakerCode(7001);

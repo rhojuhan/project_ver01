@@ -2,16 +2,15 @@ package com.project.REST.consulting.DTO;
 
 public class DefaultDataDTO {
 	private int tel_code;
-	private int plan_code;
+	
 	private String plan_name;
-	private int plan_price;
+	private String plan_modify;
 	private String plan_infor1;
 	private String plan_infor2;
 	private String plan_infor3;
+	private int plan_price;
 	private int plan_sale;
-	private String plan_modify;
-	private int makerCode;
-	private int productCode;
+	
 	private String productName;
 	private int productPrice;
 	private String producrINfor_os;
@@ -20,18 +19,11 @@ public class DefaultDataDTO {
 	private String producrINfor_memory;
 	private int producrINfor_ratings;
 	private String producrINfor_ratings_infor;
-	
 	public int getTel_code() {
 		return tel_code;
 	}
 	public void setTel_code(int tel_code) {
 		this.tel_code = tel_code;
-	}
-	public int getPlan_code() {
-		return plan_code;
-	}
-	public void setPlan_code(int plan_code) {
-		this.plan_code = plan_code;
 	}
 	public String getPlan_name() {
 		return plan_name;
@@ -39,11 +31,11 @@ public class DefaultDataDTO {
 	public void setPlan_name(String plan_name) {
 		this.plan_name = plan_name;
 	}
-	public int getPlan_price() {
-		return plan_price;
+	public String getPlan_modify() {
+		return plan_modify;
 	}
-	public void setPlan_price(int plan_price) {
-		this.plan_price = plan_price;
+	public void setPlan_modify(String plan_modify) {
+		this.plan_modify = plan_modify;
 	}
 	public String getPlan_infor1() {
 		return plan_infor1;
@@ -63,29 +55,17 @@ public class DefaultDataDTO {
 	public void setPlan_infor3(String plan_infor3) {
 		this.plan_infor3 = plan_infor3;
 	}
+	public int getPlan_price() {
+		return plan_price;
+	}
+	public void setPlan_price(int plan_price) {
+		this.plan_price = plan_price;
+	}
 	public int getPlan_sale() {
 		return plan_sale;
 	}
 	public void setPlan_sale(int plan_sale) {
 		this.plan_sale = plan_sale;
-	}
-	public String getPlan_modify() {
-		return plan_modify;
-	}
-	public void setPlan_modify(String plan_modify) {
-		this.plan_modify = plan_modify;
-	}
-	public int getMakerCode() {
-		return makerCode;
-	}
-	public void setMakerCode(int makerCode) {
-		this.makerCode = makerCode;
-	}
-	public int getProductCode() {
-		return productCode;
-	}
-	public void setProductCode(int productCode) {
-		this.productCode = productCode;
 	}
 	public String getProductName() {
 		return productName;
@@ -135,13 +115,11 @@ public class DefaultDataDTO {
 	public void setProducrINfor_ratings_infor(String producrINfor_ratings_infor) {
 		this.producrINfor_ratings_infor = producrINfor_ratings_infor;
 	}
-	
 	@Override
 	public String toString() {
-		return "DefaultDataDTO [tel_code=" + tel_code + ", plan_code=" + plan_code + ", plan_name=" + plan_name
-				+ ", plan_price=" + plan_price + ", plan_infor1=" + plan_infor1 + ", plan_infor2=" + plan_infor2
-				+ ", plan_infor3=" + plan_infor3 + ", plan_sale=" + plan_sale + ", plan_modify=" + plan_modify
-				+ ", makerCode=" + makerCode + ", productCode=" + productCode + ", productName=" + productName
+		return "DefaultDataDTO [tel_code=" + tel_code + ", plan_name=" + plan_name + ", plan_modify=" + plan_modify
+				+ ", plan_infor1=" + plan_infor1 + ", plan_infor2=" + plan_infor2 + ", plan_infor3=" + plan_infor3
+				+ ", plan_price=" + plan_price + ", plan_sale=" + plan_sale + ", productName=" + productName
 				+ ", productPrice=" + productPrice + ", producrINfor_os=" + producrINfor_os + ", producrINfor_cpu="
 				+ producrINfor_cpu + ", producrINfor_camera=" + producrINfor_camera + ", producrINfor_memory="
 				+ producrINfor_memory + ", producrINfor_ratings=" + producrINfor_ratings

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.REST.consulting.DTO.DefaultDataDTO;
+import com.project.REST.consulting.DTO.DefaultPrameterDTO;
 import com.project.REST.consulting.Service.CosultingServiceInterface;
 
 @RestController
@@ -28,7 +29,7 @@ public class CosunltingController {
 		int defaultMakerCode = 7001;
 		int defaultProductCode = 7031;
 		
-		DefaultDataDTO defaultDataDTO = new DefaultDataDTO();
+		DefaultPrameterDTO defaultDataDTO = new DefaultPrameterDTO();
 		defaultDataDTO.setTel_code(defaultTelCode);
 		defaultDataDTO.setPlan_code(defaultPlanCode);
 		defaultDataDTO.setMakerCode(defaultMakerCode);
