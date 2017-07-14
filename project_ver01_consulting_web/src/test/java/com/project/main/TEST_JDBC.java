@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.project.REST.consulting.DAO.ConsultingInterface;
+import com.project.REST.consulting.DTO.DefaultDataDTO;
 import com.project.REST.consulting.DTO.MakerProductDTO;
 import com.project.REST.consulting.Service.CosultingServiceInterface;
 
@@ -48,13 +49,12 @@ public class TEST_JDBC {
 //	}
 	@Test
 	public void getTestDefaultData()throws Exception{
-		
-		MakerProductDTO makerDTO =new MakerProductDTO();
-	
-			makerDTO.setMakerCode(7001);
-			makerDTO.setProductCode(7031);
-		
-		System.out.println(service.getDefaultMakerList(makerDTO));
-		
+		DefaultDataDTO defaultDataDTO =new DefaultDataDTO();
+		defaultDataDTO.setTel_code(2004);
+		defaultDataDTO.setPlan_code(3012);
+		defaultDataDTO.setMakerCode(7001);
+		defaultDataDTO.setProductCode(7031);
+//		System.out.println(con.getDefaultAllList(defaultDataDTO));
+		System.out.println(service.getDefaultAllList(defaultDataDTO));
 	}
 }

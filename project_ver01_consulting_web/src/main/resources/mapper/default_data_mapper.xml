@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.REST.consulting.DAO">
+    <select id="getDefaultAllList" resultType="DefaultDataDTO">
+    	<![CDATA[
+    	select plan_tbl.tel_code,plan_code,plan_name,plan_price,plan_infor1,plan_infor2,plan_infor3,plan_sale,plan_modify,maker_product_tbl.makerCode,productCode,productName,productPrice,producrINfor_os,producrINfor_cpu,producrINfor_camera,producrINfor_memory,producrINfor_ratings,producrINfor_ratings_infor
+		from plan_tbl, MAKER_PRODUCT_TBL
+		where plan_tbl.TEL_CODE=#{tel_code} AND plan_tbl.PLAN_CODE=#{plan_code} AND MAKER_PRODUCT_TBL.MAKERCODE=#{makerCode} AND MAKER_PRODUCT_TBL.PRODUCTCODE=#{productCode}
+    	]]>
+    </select>
+</mapper>
